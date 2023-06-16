@@ -1,0 +1,3 @@
+[submodule "/home/cake/.config/nvim"]
+	path = /home/cake/.config/nvim
+	url = https://github.com/UlascanErsoy/nvim-config.git
