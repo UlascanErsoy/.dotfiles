@@ -1,3 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/UlascanErsoy/nvim-config
+[submodule "CuteScripts"]
+	path = CuteScripts
+	url = https://github.com/UlascanErsoy/CuteScripts.git
