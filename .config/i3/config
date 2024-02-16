@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Noto Mono, Noto Sans Mono CJK JP, FontAwesome 10.6
+font pango:Noto Mono, Noto Sans Mono CJK JP, FontAwesome 6 Brands, FontAwesome 10.6
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -28,6 +28,8 @@ for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/libexec/gsd-xsettings
+exec --no-startup-id picom -CGb
+exec --no-startup-id nitrogen --restore
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -188,6 +190,8 @@ bindsym $mod+r mode "resize"
 bindsym $mod+Shift+s exec --no-startup-id ~/CuteScripts/monitor-update.sh
 bindsym $mod+b exec --no-startup-id ~/CuteScripts/brightness-setting.sh dmenu
 bindsym $mod+Shift+b exec --no-startup-id ~/CuteScripts/refresh-rate-setting.sh dmenu
+bindsym $mod+n exec --no-startup-id ~/CuteScripts/toggle_picom.sh
+bindsym $mod+Shift+n exec --no-startup-id ~/CuteScripts/random_bg.py
 bindsym Control+Mod1+l exec --no-startup-id "i3lock -c 000000"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

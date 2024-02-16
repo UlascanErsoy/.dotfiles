@@ -4,6 +4,7 @@ general {
         interval = 5
 }
 
+order += "volume master"
 order += "disk /"
 order += "wireless wlp0s20f3"
 order += "battery 0"
@@ -14,8 +15,6 @@ order += "tztime local"
 wireless wlp0s20f3{
         format_up = "%essid"
 }
-
-
 
 battery 0 {
         format = "%status %percentage %remaining %emptytime"
@@ -51,6 +50,10 @@ disk "/" {
         format = "%free"
 }
 
-read_file uptime {
-        path = "/proc/uptime"
+volume master {
+    format = "%volume  "
+    format_muted = " "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
 }

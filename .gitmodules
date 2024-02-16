@@ -4,3 +4,9 @@
 [submodule "CuteScripts"]
 	path = CuteScripts
 	url = https://github.com/UlascanErsoy/CuteScripts.git
+[submodule "workspace/my-github-io/themes/responsive"]
+	path = workspace/my-github-io/themes/responsive
+	url = https://github.com/razonyang/hugo-theme-bootstrap
+[submodule "workspace/my-github-io/themes/stack"]
+	path = workspace/my-github-io/themes/stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack
